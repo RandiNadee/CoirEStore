@@ -110,6 +110,7 @@ if (isset($_GET["register"])) {
 				<div class="col-md-2"></div>
 			</div>
 		</div>
+		<?php	include "footer.php";	?>	
 	</body>
 
 	</html>

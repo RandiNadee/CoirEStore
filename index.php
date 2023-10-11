@@ -899,11 +899,7 @@ session_start();
 				</main>
 			</div>
 		</div>
-		<?php
-	
-	include "footer.php";
-	?>
-		
+		<?php	include "footer.php";	?>		
 	</div>
 	<script src="./indexFileMedia/site-bundle.js.download" type="text/javascript"></script>
 	<script type="text/javascript" data-sqs-type="imageloader-bootstrapper">
