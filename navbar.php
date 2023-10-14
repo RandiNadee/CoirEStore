@@ -1,77 +1,36 @@
-<div class="wait overlay">
-    <div class="loader"></div>
-</div>
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
-                <span class="sr-only">navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="#" class="navbar-brand">E-Store</a>
-        </div>
-        <div class="collapse navbar-collapse" id="collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="index.php"></span>Home</a></li>
-                <li><a href="products.php"></span>Products</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span>Cart<span class="badge">0</span></a>
-                    <div class="dropdown-menu" style="width:400px;">
-                        <div class="panel panel-success">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-md-3">Sl.No</div>
-                                    <div class="col-md-3">Product Image</div>
-                                    <div class="col-md-3">Product Name</div>
-                                    <div class="col-md-3">Total Rs.</div>
-                                </div>
-                            </div>
-                            <div class="panel-body">
-                                <div id="cart_product">
-                                </div>
-                            </div>
-                            <div class="panel-footer"></div>
-                        </div>
-                    </div>
-                </li>
-                <?php if (isset($_SESSION["uid"])) { ?>
-                    <li><a href="customer_order.php"></span>My Orders</a></li>
-                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><?php echo "Hi," . $_SESSION["name"]; ?></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="cart.php" style="text-decoration:none; color:blue;"><span class="glyphicon glyphicon-shopping-cart">Cart</a></li>
-                            <li class="divider"></li>
-                            <li><a href="password_change.php" style="text-decoration:none; color:blue;">Change Password</a></li>
-                            <li class="divider"></li>
-                            <li><a href="logout.php" style="text-decoration:none; color:blue;">Logout</a></li>
-                        </ul>
-                    </li>
-                <?php } else { ?>
-                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">SignIn</a>
-                        <ul class="dropdown-menu">
-                            <div style="width:300px;">
-                                <div class="panel panel-primary">
-                                    <div class="panel-heading">Login</div>
-                                    <div class="panel-heading">
-                                        <form onsubmit="return false" id="login">
-                                            <label for="email">Email</label>
-                                            <input type="email" class="form-control" name="email" id="email" required />
-                                            <label for="email">Password</label>
-                                            <input type="password" class="form-control" name="password" id="password" required />
-                                            <p><br /></p>
-                                            <a href="#" style="color:white; list-style:none;">Forgotten Password</a><input type="submit" class="btn btn-success" style="float:right;">
-                                        </form>
-                                    </div>
-                                    <div class="panel-footer" id="e_msg"></div>
-                                </div>
-                            </div>
-                        </ul>
-                    </li>
-                    <li><a href="customer_registration.php?register=1">Register</a></li>
-                <?php } ?>
-            </ul>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
     </div>
-</div>
+  </div>
+</nav>
